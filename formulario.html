@@ -51,6 +51,40 @@
                         <label for="txtPaswd">Contraseña:</label>
                         <input type="password" id="txtPaswd" name="pswd" placeholder="Min 8 , 1 May, 1Min y 1 Esp" />
                     </div>
+                    <fieldset>
+                        <legend>Estado Civil</legend>
+                        <label>
+                            <input type="radio" name="rbtEstCivil" value="slt" checked />
+                            <span>Soltero(a)</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="rbtEstCivil" value="csd" />
+                            <span>Casado(a)</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="rbtEstCivil" value="vd" />
+                            <span>Viudo(a)</span>
+                        </label>
+                    </fieldset>
+                    <div>
+                        <label for="cmbPaises">País participante de la Copa del Mundo</label>
+                        <select name="cmbPaises" id="cmbPaises">
+                            <option value="" selected>Selecionar un País</option>
+                            <option value="grm">Alemánia</option>
+                            <option value="arg">Argentina</option>
+                            <option value="nzl">Nueva Zelanda</option>
+                            <option value="prt">Portugal</option>
+                            <option value="hld">Holanda</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ltxtBio">Bio</label>
+                        <br/>
+                        <textarea name="llxtBio" 
+                            id="ltxtBio"
+                            placeholder="Escribo una breve auto biografía"
+                        ></textarea>
+                    </div>
                     <div>
                         <button type="submit" name="btnEnviar">Solicitar Acceso</button>
                     </div>
@@ -64,6 +98,9 @@
                 </ol>
             </section>
         </main>
+        <aside>
+            
+        </aside>
         <footer>
 
         </footer>
