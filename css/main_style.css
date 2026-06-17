@@ -1,0 +1,75 @@
+p {
+    color: #fff;
+    background-color: #101089;
+}
+
+/*Selectores: son la definicion de la estructura que utilizará el navegador para
+determinar qué nodos | elementos html se aplicará las reglas definidas 
+
+Bloque Style y en CSS Externos | archivos
+
+< selector > {
+    <regla> : <valor> ;
+    <regla> : <valor> ;
+    <regla> : <valor> ;
+    n...
+}
+
+body
+
+*/ 
+
+:root{
+ /* variables de css*/ 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height:100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height:100vh;
+  background-color: #fff;  
+  color : #333;
+  padding: 0px;
+  margin:0px;
+}
+
+header, footer {
+  background-color: #333;  
+  color : #fff;
+}
+
+main {
+    flex: 1;
+}
+
+p {
+   color :#333;
+   background-color: #fff;
+}
+/* cd .content/p */
+.content p {
+    color :#333;
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+header h1{
+    margin:0px;
+}
+
+header nav ul li a {
+    color: green;
+    background-color: yellowgreen;
+}
+
+.futbol {
+    font-size: 2rem; /* 16 * 2 */
+}
