@@ -8,7 +8,10 @@
 </head>
 <body>
     <header>
-        <h1>CSS Cascade Style Sheets <br/> Hoja de Estilo en Cascada</h1>
+        <section class="brand">
+            <img src="https://picsum.photos/72/72" alt="brand Image" />
+            <h1>CSS Cascade Style Sheets <br/> <span class="sub">Hoja de Estilo en Cascada</span></h1>
+        </section>
         <nav>
             <ul>
                 <li>
@@ -27,6 +30,79 @@
         </nav>
     </header>
     <main>
+        <section class="hero-panel">
+            <div class="hero-background">
+                <picture>
+                    <source srcset="https://picsum.photos/id/5/1300/720" media="(min-width:1025px)"/>
+                    <source srcset="https://picsum.photos/id/5/1025/640" media="(min-width:700px)"/>
+                    <img src="https://picsum.photos/id/5/480/480" alt="hero panel image"/>
+                </picture>
+            </div>
+            <div class="cta-holder rp">
+                <h2>A CTA Holder</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <a class="btn-hero" href="#">CTA Button</a>
+            </div>
+        </section>
+        <section class="cards-holder grid">
+            <div class="row justify-center">
+                <div class="col-12 col-m-6 col-l-4 justify-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="https://picsum.photos/id/156/300/200" alt="card img" />
+                            <span class="card-header-label">Un label para esta tarjeta</span>
+                        </div>
+                        <div class="card-half">
+                            <div class="card-body ">
+                                <h2>Título del Card</h2>
+                                <p>Descripción del Card</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="card-footer-big-label">HND 100</span>
+                                <a class="card-footer-cta" href="">Card CTA</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-m-6 col-l-4 justify-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="https://picsum.photos/id/157/300/200" alt="card img" />
+                            <span class="card-header-label">Un label para esta tarjeta 2</span>
+                        </div>
+                        <div class="card-half">
+                            <div class="card-body ">
+                                <h2>Título del Card 2</h2>
+                                <p>Descripción del Card 2</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="card-footer-big-label">HND 100</span>
+                                <a class="card-footer-cta" href="">Card CTA</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-m-6 col-l-4 justify-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="https://picsum.photos/id/157/300/200" alt="card img" />
+                            <span class="card-header-label">Un label para esta tarjeta 3</span>
+                        </div>
+                        <div class="card-half">
+                            <div class="card-body ">
+                                <h2>Título del Card 3</h2>
+                                <p>Descripción del Card 3</p>
+                            </div>
+                            <div class="card-footer">
+                                <span class="card-footer-big-label">HND 100</span>
+                                <a class="card-footer-cta" href="">Card CTA</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
         <h2>Tres formas de incorporar CSS en documento HTML</h2>
         <section class="content">
             <h3>CSS como atributo Style</h3>
@@ -41,7 +117,7 @@
                 Obcaecati, doloremque?</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi tempore excepturi iure hic cum sed, at accusamus a quo. Qui, eveniet. Culpa neque, eos dicta repudiandae architecto labore obcaecati porro?
         </section>
-        <section class="content">
+        <section class="content demo-rd">
             <h3 class="futbol">CSS a travez de ligas a archivos css externos</h3>
             <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nihil delectus dignissimos
@@ -62,6 +138,22 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto numquam fugiat hic? Placeat vitae voluptatibus accusantium fugit, dolorem ex debitis optio odit maxime quibusdam rerum accusamus quidem fuga officiis aut.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptate, officia dolores nihil blanditiis soluta quo voluptatibus vel hic asperiores, eligendi corrupti iure? Voluptatem corrupti perspiciatis, earum mollitia iste eligendi.</p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, sunt molestias repudiandae ut eum impedit culpa doloremque incidunt officia magnam suscipit excepturi deserunt expedita odit nesciunt harum animi? Voluptate, magni!</p>
+            </div>
+        </section>
+        <section class="content grid debug">
+            <div class="row">
+                <div class="col-6 col-m-4 col-l-1">Columna A</div>
+                <div class="col-6 col-m-4 col-l-1">Columna B</div>
+                <div class="col-6 col-m-4 col-l-1">Columna C</div>
+                <div class="col-6 col-m-12 col-l-9">Columna D</div>
+            </div>
+            <div class="row">
+                <div class="col-6 offset-3 col-m-4 offset-m-4 col-l-8 offset-l-2">
+                    Center E
+                </div>
+            </div>
+            <div class="row">
+                
             </div>
         </section>
     </main>
