@@ -443,3 +443,153 @@ Mobile First
     .grid .row .offset-l-11 { margin-left: calc(100% / 12 * 11);}
     .grid .row .offset-l-12 { margin-left: 100%;}
 }
+
+
+/* Clases y estilos para los formularios*/
+
+.form-demo {
+    margin-top:1rem;
+}
+
+form {
+    width:100%;
+    padding: 1rem;
+}
+label {
+    display:block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+input {
+    display: block;
+    padding:0.25rem 0.5rem;
+    font-size: 1rem;
+    width:100%;
+    border: 1px solid #000;
+    border-radius: 7px;
+}
+
+button {
+    display: inline-block;
+    padding: 0.8rem 1rem;
+    font-size:1rem;
+    border-radius: 27px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button.primary {
+    background-color:#00b13b;
+}
+
+button.secondary {
+    background-color:#7b6c1e;
+}
+
+input:focus {
+    outline: inset 2px #000b7f;
+}
+
+input.error {
+    border-color: crimson;
+}
+
+.form-b input {
+    border:none;
+    border-bottom: 2px solid #000;
+    border-radius: 0px;
+}
+.form-b input:focus {
+    outline: none;
+    border-bottom: 2px solid #00b13b;
+}
+
+.form-b input.error {
+    outline: none;
+    border-bottom: 2px solid crimson;
+}
+
+.form-b button {
+    border-radius: 7px;
+    box-shadow: 3px 3px 15px #555;
+}
+
+.form-actions {
+    display:flex;
+    gap:0.5rem;
+    justify-content: end;
+    margin-top:1rem;
+}
+.input-field{
+    margin-top:0.5rem;
+}
+
+
+
+@media (min-width:1025px) {
+    .input-field {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+
+.spinner-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background-color: #000000dd;
+}
+
+.spinner-container .spinner {
+    width:120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #00b13b;
+    border-right-style: dotted;
+    animation: spinner-animation 1s ease-in-out infinite;
+}
+
+.spinner-container .bar-loader {
+    width:0px;
+    height: 5x;
+    border-radius: 7px;
+    margin-top:1rem;
+    animation: bar-animation 5s ease-in-out infinite;
+}
+
+@keyframes spinner-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes bar-animation {
+    0% {
+        width:0px;
+        background-color: #771a44;
+    }
+    50% {
+        width:25px;
+        background-color: #b72e6b;
+    }
+    90% {
+        width:70px;
+        background-color: #1a4d77;
+    }
+    100% {
+        width:120px;
+        background-color: #21411c;
+    }
+}

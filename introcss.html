@@ -102,8 +102,45 @@
                 </div>
             </div>
         </section>
+        <section class="content grid form-demo">
+            <div class="row">
+                <div class="col-12 col-m-6">
+                    <form action="introcss.html" method="get">
+                        <h2>Formulario Tipo A</h2>
+                        <div class="input-field">
+                            <label for="input_a_1" class="col-l-3">Textbox Label</label>
+                            <input type="text" name="input_a_1" id="input_a_1" class="col-l-9" placeholder="Input A 1" />
+                        </div>
+                         <div class="input-field">
+                            <label for="input_a_2" class="col-l-3">Textbox Error</label>
+                            <input type="text" name="input_a_2" id="input_a_2" class="col-l-9 error" placeholder="Input A 2" />
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="primary" name="btn-form-a_1">Confirmar</button>
+                            <button type="button" class="secondary" name="btn-form-a_2">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-m-6">
+                    <form action="introcss.html" method="get" class="form-b">
+                        <h2>Formulario Tipo B</h2>
+                        <div class="input-field">
+                            <label for="input_b_1" class="col-l-3">Textbox Label</label>
+                            <input type="text" class="col-l-9" name="input_b_1" id="input_b_1" placeholder="Input B 1" />
+                        </div>
+                        <div class="input-field">
+                            <label for="input_b_2" class="col-l-3">Textbox Error</label>
+                            <input type="text" name="input_b_2" id="input_b_2" class="col-l-9 error" placeholder="Input B 2" />
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="primary" name="btn-form-a_1">Confirmar</button>
+                            <button type="button" class="secondary" name="btn-form-a_2">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
-        <h2>Tres formas de incorporar CSS en documento HTML</h2>
+
         <section class="content">
             <h3>CSS como atributo Style</h3>
             <p>Los estilos son organizados como una diccionario separado por ; donde la llave es la
@@ -160,5 +197,11 @@
     <footer>
         <span>Todos los Derechos Reservados 2026</span>
     </footer>
+    <aside class="spinner-container">
+        <div>
+            <div class="spinner">&nbsp;</div>
+            <div class="bar-loader">&nbsp;</div>
+        </div>
+    </aside>
 </body>
 </html>
