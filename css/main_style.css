@@ -62,16 +62,39 @@ main {
 
 header {
     display: flex;
+    position:relative;
+    flex-direction: column;
     align-items: center;
     padding:0.5rem 1rem; /*16 * 0.5 = 8px*/
     box-shadow: 0px 5px 5px #000;
 }
+header .hmb-button {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0.25rem;
+    position: absolute;
+    top:1rem;
+    left: 1rem;
+    width:64px;
+    height: 64px;
+    cursor: pointer;
+}
+header .hmb-button div {
+    width:60%;
+    height:5px;
+    border-radius: 3px;
+    background-color: #fff;
 
+}
 header section{
     display:flex;
+    flex-direction: column;
     gap:0.5rem;
     flex:1;
     align-items: center;
+    justify-content: center;
 }
 
 header section img {
@@ -87,21 +110,31 @@ header section h1 {
     margin:0px;
 }
 header section h1 span{
+    display: block;
     font-size: 0.5rem;
+    text-align: center;
 }
-
+header nav{
+    width:100%;
+}
 header nav ul {
     display:flex;
+    flex-direction: column;
     padding:0px;
     list-style: none;
     gap: 0.5rem;
+    width:100%;
 }
-
+header nav ul li {
+    width:100%;
+}
 header nav ul li a {
     display: inline-block;
     color: #fff;
     padding:0.5rem 0.8rem;
+    border-bottom: 1px solid #fff;
     text-decoration: none;
+    width:100%;
     transition: background-color 1s ease-in-out, color 1s ease-in-out;
 }
 
@@ -110,7 +143,11 @@ header nav ul li a:hover {
     color: #333;
 }
 
-
+@media (min-width:720px) {
+    header {
+        flex-direction: row;
+    }
+}
 
 .futbol {
     font-size: 2rem; /* 16 * 2 */
@@ -592,4 +629,8 @@ input.error {
         width:120px;
         background-color: #21411c;
     }
+}
+
+.hidden {
+    display:none;
 }
