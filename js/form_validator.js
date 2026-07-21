@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     let inputFieldA1Error = null;
     let inputFieldA2Error = null;
+
+    let errorsRegistered = {};
     // Interceptar el evento submit de los formularios
     formA.addEventListener("submit",(e)=>{
         e.preventDefault();
@@ -38,14 +40,28 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
 
     function createErrorElement(inputField, errorField, input,  errorMsg, focused ) {
-        errorField = document.createElement("DIV");
-        errorField.classList.add("col-l-9", "error", "offset-l-3");
-        input.classList.add('error');
-        errorField.innerHTML = errorMsg;
-        inputField.appendChild(errorField);
+        if (!errorsRegistered[input.id]) {
+            errorField = document.createElement("DIV");
+            errorField.classList.add("col-l-9", "error", "offset-l-3");
+            input.classList.add('error');
+            input.addEventListener('change', onBlurOrChange);
+            errorField.innerHTML = errorMsg;
+            inputField.appendChild(errorField);
+            errorsRegistered[input.id] = [input, errorField, inputField]
+        }
         if (focused) {
             input.focus();
         }
         return true;
+    }
+    function onBlurOrChange(e){
+        const target = e.target;
+        if (errorsRegistered[target.id]) {
+            let [input, errorField, inputField] = errorsRegistered[target.id];
+            input.classList.remove("error");
+            errorField.remove();
+            delete errorsRegistered[target.id];
+            input.removeEventListener("change", onBlurOrChange);
+        }
     }
 });
