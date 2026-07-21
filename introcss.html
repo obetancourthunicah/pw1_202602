@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/main_style.css" />
     <script src="js/say_hello.js"></script>
+    <script src="js/carusel.js"></script>
+    <script src="js/form_validator.js"></script>
 </head>
+
 <body>
     <header>
         <section class="hmb-button">
@@ -16,7 +20,7 @@
         </section>
         <section class="brand">
             <img src="https://picsum.photos/72/72" alt="brand Image" />
-            <h1>CSS Cascade Style Sheets <br/> <span class="sub">Hoja de Estilo en Cascada</span></h1>
+            <h1>CSS Cascade Style Sheets <br /> <span class="sub">Hoja de Estilo en Cascada</span></h1>
         </section>
         <nav class="hidden">
             <ul>
@@ -36,18 +40,64 @@
         </nav>
     </header>
     <main>
-        <section class="hero-panel">
-            <div class="hero-background">
-                <picture>
-                    <source srcset="https://picsum.photos/id/5/1300/720" media="(min-width:1025px)"/>
-                    <source srcset="https://picsum.photos/id/5/1025/640" media="(min-width:700px)"/>
-                    <img src="https://picsum.photos/id/5/480/480" alt="hero panel image"/>
-                </picture>
-            </div>
-            <div class="cta-holder rp">
-                <h2>A CTA Holder</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                <a class="btn-hero" href="#">CTA Button</a>
+        <section class="carusel">
+            <div class="carusel-lane">
+                <section class="hero-panel">
+                    <div class="hero-background">
+                        <picture>
+                            <source srcset="https://picsum.photos/id/5/1300/720" media="(min-width:1025px)" />
+                            <source srcset="https://picsum.photos/id/5/1025/640" media="(min-width:700px)" />
+                            <img src="https://picsum.photos/id/5/480/480" alt="hero panel image" />
+                        </picture>
+                    </div>
+                    <div class="cta-holder rp">
+                        <h2>A CTA Holder</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <a class="btn-hero" href="#">CTA Button</a>
+                    </div>
+                </section>
+                <section class="hero-panel">
+                    <div class="hero-background">
+                        <picture>
+                            <source srcset="https://picsum.photos/id/9/1300/720" media="(min-width:1025px)" />
+                            <source srcset="https://picsum.photos/id/9/1025/640" media="(min-width:700px)" />
+                            <img src="https://picsum.photos/id/9/480/480" alt="hero panel image" />
+                        </picture>
+                    </div>
+                    <div class="cta-holder pn1">
+                        <h2>A CTA Holder</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <a class="btn-hero" href="#">CTA Button</a>
+                    </div>
+                </section>
+                <section class="hero-panel">
+                    <div class="hero-background">
+                        <picture>
+                            <source srcset="https://picsum.photos/id/6/1300/720" media="(min-width:1025px)" />
+                            <source srcset="https://picsum.photos/id/6/1025/640" media="(min-width:700px)" />
+                            <img src="https://picsum.photos/id/6/480/480" alt="hero panel image" />
+                        </picture>
+                    </div>
+                    <div class="cta-holder">
+                        <h2>A CTA Holder</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <a class="btn-hero" href="#">CTA Button</a>
+                    </div>
+                </section>
+                <section class="hero-panel">
+                    <div class="hero-background">
+                        <picture>
+                            <source srcset="https://picsum.photos/id/7/1300/720" media="(min-width:1025px)" />
+                            <source srcset="https://picsum.photos/id/7/1025/640" media="(min-width:700px)" />
+                            <img src="https://picsum.photos/id/7/480/480" alt="hero panel image" />
+                        </picture>
+                    </div>
+                    <div class="cta-holder pn3">
+                        <h2>A CTA Holder</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <a class="btn-hero" href="#">CTA Button</a>
+                    </div>
+                </section>
             </div>
         </section>
         <section class="cards-holder grid">
@@ -111,15 +161,17 @@
         <section class="content grid form-demo">
             <div class="row">
                 <div class="col-12 col-m-6">
-                    <form action="introcss.html" method="get">
+                    <form action="introcss.html" method="get" id="form_a" novalidate>
                         <h2>Formulario Tipo A</h2>
                         <div class="input-field">
                             <label for="input_a_1" class="col-l-3">Textbox Label</label>
-                            <input type="text" name="input_a_1" id="input_a_1" class="col-l-9" placeholder="Input A 1" />
+                            <input type="text" name="input_a_1" id="input_a_1" class="col-l-9"
+                                placeholder="Input A 1" />
                         </div>
-                         <div class="input-field">
+                        <div class="input-field">
                             <label for="input_a_2" class="col-l-3">Textbox Error</label>
-                            <input type="text" name="input_a_2" id="input_a_2" class="col-l-9 error" placeholder="Input A 2" />
+                            <input type="text" name="input_a_2" id="input_a_2" class="col-l-9"
+                                placeholder="Input A 2" />
                         </div>
                         <div class="form-actions">
                             <button type="submit" class="primary" name="btn-form-a_1">Confirmar</button>
@@ -128,19 +180,21 @@
                     </form>
                 </div>
                 <div class="col-12 col-m-6">
-                    <form action="introcss.html" method="get" class="form-b">
+                    <form action="introcss.html" method="get" class="form-b" id="form-b">
                         <h2>Formulario Tipo B</h2>
                         <div class="input-field">
                             <label for="input_b_1" class="col-l-3">Textbox Label</label>
-                            <input type="text" class="col-l-9" name="input_b_1" id="input_b_1" placeholder="Input B 1" />
+                            <input type="text" class="col-l-9" name="input_b_1" id="input_b_1"
+                                placeholder="Input B 1" />
                         </div>
                         <div class="input-field">
                             <label for="input_b_2" class="col-l-3">Textbox Error</label>
-                            <input type="text" name="input_b_2" id="input_b_2" class="col-l-9 error" placeholder="Input B 2" />
+                            <input type="text" name="input_b_2" id="input_b_2" class="col-l-9 error"
+                                placeholder="Input B 2" />
                         </div>
                         <div class="form-actions">
-                            <button type="submit" class="primary" name="btn-form-a_1">Confirmar</button>
-                            <button type="button" class="secondary" name="btn-form-a_2">Cancelar</button>
+                            <button type="submit" class="primary" name="btn-form-b_1">Confirmar</button>
+                            <button type="button" class="secondary" name="btn-form-b_2">Cancelar</button>
                         </div>
                     </form>
                 </div>
@@ -152,21 +206,26 @@
             <p>Los estilos son organizados como una diccionario separado por ; donde la llave es la
                 regla y el valor modifica lo estrablecido de forma predeterminado por el navegador</p>
             <h3>CSS como bloque Style en el documento</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci accusantium facilis
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci accusantium facilis
                 obcaecati doloribus praesentium, expedita eaque cum voluptatibus quidem nisi voluptate consectetur
                 maiores placeat eius a! Odio, molestiae asperiores?</p>
-            <p class="futbol">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nihil delectus dignissimos
-                quod ab amet non tenetur fugit vel fuga laborum sint maiores laudantium aperiam, molestias illo voluptatem?
+            <p class="futbol">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nihil delectus
+                dignissimos
+                quod ab amet non tenetur fugit vel fuga laborum sint maiores laudantium aperiam, molestias illo
+                voluptatem?
                 Obcaecati, doloremque?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi tempore excepturi iure hic cum sed, at accusamus a quo. Qui, eveniet. Culpa neque, eos dicta repudiandae architecto labore obcaecati porro?
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi tempore excepturi iure hic cum sed, at
+                accusamus a quo. Qui, eveniet. Culpa neque, eos dicta repudiandae architecto labore obcaecati porro?
         </section>
         <section class="content demo-rd">
             <h3 class="futbol">CSS a travez de ligas a archivos css externos</h3>
             <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nihil delectus dignissimos
-                    quod ab amet non tenetur fugit vel fuga laborum sint maiores laudantium aperiam, molestias illo voluptatem?
+                    quod ab amet non tenetur fugit vel fuga laborum sint maiores laudantium aperiam, molestias illo
+                    voluptatem?
                     Obcaecati, doloremque?</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi tempore excepturi iure hic cum sed, at accusamus a quo. Qui, eveniet. Culpa neque, eos dicta repudiandae architecto labore obcaecati porro?
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi tempore excepturi iure hic cum sed, at
+                    accusamus a quo. Qui, eveniet. Culpa neque, eos dicta repudiandae architecto labore obcaecati porro?
             </div>
         </section>
         <section class="content">
@@ -178,9 +237,15 @@
             </div>
             <div>
                 <h2>Call to Action</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto numquam fugiat hic? Placeat vitae voluptatibus accusantium fugit, dolorem ex debitis optio odit maxime quibusdam rerum accusamus quidem fuga officiis aut.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptate, officia dolores nihil blanditiis soluta quo voluptatibus vel hic asperiores, eligendi corrupti iure? Voluptatem corrupti perspiciatis, earum mollitia iste eligendi.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, sunt molestias repudiandae ut eum impedit culpa doloremque incidunt officia magnam suscipit excepturi deserunt expedita odit nesciunt harum animi? Voluptate, magni!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto numquam fugiat hic? Placeat
+                    vitae voluptatibus accusantium fugit, dolorem ex debitis optio odit maxime quibusdam rerum accusamus
+                    quidem fuga officiis aut.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptate, officia dolores nihil
+                    blanditiis soluta quo voluptatibus vel hic asperiores, eligendi corrupti iure? Voluptatem corrupti
+                    perspiciatis, earum mollitia iste eligendi.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, sunt molestias repudiandae ut
+                    eum impedit culpa doloremque incidunt officia magnam suscipit excepturi deserunt expedita odit
+                    nesciunt harum animi? Voluptate, magni!</p>
             </div>
         </section>
         <section class="content grid debug">
@@ -196,7 +261,7 @@
                 </div>
             </div>
             <div class="row">
-                
+
             </div>
         </section>
     </main>
@@ -210,4 +275,5 @@
         </div>
     </aside>
 </body>
+
 </html>

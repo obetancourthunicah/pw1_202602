@@ -153,6 +153,63 @@ header nav ul li a:hover {
     font-size: 2rem; /* 16 * 2 */
 }
 
+.carusel {
+    position:relative;
+    width:100vw;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.carusel .carusel-lane{
+    display:flex;
+    transition: transform 1s ease;
+}
+
+.carusel .carusel-lane > section{
+    flex-shrink: 0;
+}
+
+.carusel .carusel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 3rem;
+    height: 6rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    top:50%;
+    background-color: #ccc;
+    color:#333;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.carusel .carusel-btn.carusel-btn-left {
+    left:0px;
+}
+.carusel .carusel-btn.carusel-btn-right {
+    right:0px;
+}
+
+.carusel .carusel-idx-btns {
+    position:absolute;
+    padding:1rem;
+    bottom: 0px;
+    left:50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap:0.5rem;
+}
+.carusel .carusel-idx-btns .carusel-idx-btn{
+    width: 2rem;
+    height: 7px;
+    border-radius: 3px;
+    background-color: #ccc;
+}
+.carusel .carusel-idx-btns .carusel-idx-btn.active {
+    background-color: #000;
+}
 .hero-panel {
     position: relative;
     width:100vw;
